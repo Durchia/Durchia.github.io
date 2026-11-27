@@ -50,7 +50,8 @@
     <nav id="navmenu" class="navmenu">
       <ul>
         <li><a href="#hero" class="active"><i class="bi bi-house navicon"></i><span>Home</span></a></li>
-        <li><a href="#about"><i class="bi bi-person navicon"></i><span>About</span></a></li>
+        <li><a href="#about"><i class="bi bi-person navicon"></i><span>About</span></a></li>         
+        <li><a href="#progress"><i class="bi bi-trophy navicon"></i><span>Progress</span></a></li>
         <li><a href="#resume"><i class="bi bi-file-earmark-text navicon"></i><span>Resume</span></a></li>
         <li><a href="#portfolio"><i class="bi bi-images navicon"></i><span>Portfolio</span></a></li>
         <li><a href="#services"><i class="bi bi-hdd-stack navicon"></i><span>Services</span></a></li>
@@ -84,7 +85,13 @@
     </section><!-- /Hero Section -->
 
         <!-- About Section -->
-    <section id="about" class="about section">
+    <section id="about" class="about section"> 
+      <!-- LW10 complementary: animated CSS shapes -->
+      <div class="about-shapes" aria-hidden="true">
+        <span class="shape shape-circle"></span>
+        <span class="shape shape-triangle"></span>
+        <span class="shape shape-square"></span>
+      </div>
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
@@ -211,7 +218,190 @@
 
       </div>
 
-    </section><!-- /Skills Section -->
+    </section><!-- /Skills Section --> 
+    <!-- Progress Section (LW10) -->
+    <section id="progress" class="progress-module section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Progress</h2>
+        <p>Track my data engineering skills, earn XP and level up my competency.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <!-- ===== PART 1: XP, level and rank ===== -->
+        <div class="pm-card">
+
+          <div class="pm-overview-top">
+
+            <div class="pm-profile">
+              <i class="bi bi-mortarboard"></i>
+              <div>
+                <h3>Data Engineering</h3>
+                <p>Student Progress</p>
+              </div>
+            </div>
+
+            <div class="pm-info-boxes">
+              <div class="pm-info">
+                <i class="bi bi-stars"></i>
+                <div>
+                  <span class="pm-label">Total XP</span>
+                  <span class="pm-value" id="total-xp">200 XP</span>
+                </div>
+              </div>
+              <div class="pm-info">
+                <i class="bi bi-bar-chart-steps"></i>
+                <div>
+                  <span class="pm-label">Level</span>
+                  <span class="pm-value" id="level">Level 3</span>
+                </div>
+              </div>
+              <div class="pm-info">
+                <i class="bi bi-trophy"></i>
+                <div>
+                  <span class="pm-label">Rank</span>
+                  <span class="pm-value" id="rank">Specialist</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- ===== PART 2: XP progress bar ===== -->
+          <div class="pm-xp-progress">
+            <div class="pm-xp-text">
+              <strong>Progress to Level 4</strong>
+              <span id="xp-text">200 / 300 XP (67%)</span>
+            </div>
+            <div class="pm-bar">
+              <div class="pm-bar-fill" id="xp-bar" style="width: 67%;"></div>
+            </div>
+          </div>
+
+        </div><!-- End PART 1 + 2 -->
+
+        <!-- ===== PART 3: Statistics ===== -->
+        <div class="pm-card pm-stats">
+          <h3>Statistics</h3>
+
+          <div class="pm-stat">
+            <i class="bi bi-list-check"></i>
+            <div>
+              <span class="pm-label">Total Skills</span>
+              <span class="pm-value" id="stat-total">7</span>
+            </div>
+          </div>
+
+          <div class="pm-stat">
+            <i class="bi bi-check-circle"></i>
+            <div>
+              <span class="pm-label">Completed Skills</span>
+              <span class="pm-value" id="stat-completed">3</span>
+            </div>
+          </div>
+
+          <div class="pm-stat">
+            <i class="bi bi-pie-chart"></i>
+            <div>
+              <span class="pm-label">Completion Rate</span>
+              <span class="pm-value" id="stat-rate">43%</span>
+            </div>
+          </div>
+        </div><!-- End PART 3 -->
+
+        <!-- ===== PART 4: Skill Kanban board ===== -->
+        <h3 class="pm-board-title">Skill Kanban Board</h3>
+        <p class="pm-board-subtitle">My data engineering skills grouped by progress status.</p>
+
+        <div class="pm-board">
+
+          <!-- Column 1: Planned -->
+          <div class="pm-column pm-planned">
+            <div class="pm-column-header">
+              <h4><i class="bi bi-calendar3"></i> Planned</h4>
+              <span class="pm-count">2 skills</span>
+            </div>
+
+            <div class="pm-skill-card">
+              <h5>Apache Airflow</h5>
+              <div class="pm-card-bottom">
+                <span class="pm-status">Planned</span>
+                <span class="pm-xp">60 XP</span>
+              </div>
+            </div>
+
+            <div class="pm-skill-card">
+              <h5>Docker</h5>
+              <div class="pm-card-bottom">
+                <span class="pm-status">Planned</span>
+                <span class="pm-xp">50 XP</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Column 2: In Progress -->
+          <div class="pm-column pm-in-progress">
+            <div class="pm-column-header">
+              <h4><i class="bi bi-arrow-repeat"></i> In Progress</h4>
+              <span class="pm-count">2 skills</span>
+            </div>
+
+            <div class="pm-skill-card">
+              <h5>Apache Spark</h5>
+              <div class="pm-card-bottom">
+                <span class="pm-status">In Progress</span>
+                <span class="pm-xp">70 XP</span>
+              </div>
+            </div>
+
+            <div class="pm-skill-card">
+              <h5>Data Warehousing</h5>
+              <div class="pm-card-bottom">
+                <span class="pm-status">In Progress</span>
+                <span class="pm-xp">55 XP</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Column 3: Completed -->
+          <div class="pm-column pm-completed">
+            <div class="pm-column-header">
+              <h4><i class="bi bi-check-circle"></i> Completed</h4>
+              <span class="pm-count">3 skills</span>
+            </div>
+
+            <div class="pm-skill-card">
+              <h5>SQL</h5>
+              <div class="pm-card-bottom">
+                <span class="pm-status">Completed</span>
+                <span class="pm-xp">80 XP</span>
+              </div>
+            </div>
+
+            <div class="pm-skill-card">
+              <h5>Python</h5>
+              <div class="pm-card-bottom">
+                <span class="pm-status">Completed</span>
+                <span class="pm-xp">75 XP</span>
+              </div>
+            </div>
+
+            <div class="pm-skill-card">
+              <h5>MATLAB</h5>
+              <div class="pm-card-bottom">
+                <span class="pm-status">Completed</span>
+                <span class="pm-xp">45 XP</span>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- End PART 4 -->
+
+      </div>
+
+    </section><!-- /Progress Section -->
 
   
         <!-- Resume Section -->
@@ -282,7 +472,10 @@
           <li>Used object-oriented design and the Factory pattern to create different user types (house owners and house seekers)</li>
           <li>Stored user data in JSON files and wrote unit tests to check the matching engine</li>
         </ul>
-      </div>
+      </div> 
+          </div><!-- END RIGHT COLUMN -->
+        </div><!-- END row -->
+      </div><!-- END container -->
 
     </section><!-- /Resume Section -->
 
@@ -347,7 +540,8 @@
 
         </div>
 
-      </div>
+      </div>     
+    </section><!-- /Portfolio Section -->
 
        <!-- Services Section -->
     <section id="services" class="services section">
@@ -498,7 +692,7 @@
 
     </section><!-- /Services Section -->
 
-i
+
 
     <!-- Contact Section -->
     <section id="contact" class="contact section">

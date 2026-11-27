@@ -341,3 +341,415 @@ a:hover {
 .price-table tbody tr:hover {
   background-color: #ccfbf1;
 }
+
+/* =========================================================
+   LW10 – MANDATORY: User competency progress module
+   ========================================================= */
+
+/* White card used for the XP area and the statistics area */
+.pm-card {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 25px 30px;
+  margin-bottom: 25px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+}
+
+/* Small grey label + big bold value (info boxes and statistics) */
+.pm-label {
+  display: block;
+  font-size: 14px;
+  color: #64748b;
+}
+
+.pm-value {
+  display: block;
+  font-family: var(--heading-font);
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--heading-color);
+}
+
+/* ---------- Part 1: profile + XP / Level / Rank (Flexbox) ---------- */
+.pm-overview-top {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.pm-profile {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding-right: 25px;
+  border-right: 1px solid #e2e8f0;
+}
+
+.pm-profile > i {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #ccfbf1;
+  color: var(--accent-color);
+  font-size: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pm-profile h3 {
+  font-size: 18px;
+  margin: 0;
+}
+
+.pm-profile p {
+  font-size: 14px;
+  color: #64748b;
+  margin: 0;
+}
+
+.pm-info-boxes {
+  display: flex;
+  gap: 15px;
+  flex: 1;
+}
+
+.pm-info {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 15px 20px;
+  background-color: #f0fdfa;
+  border-radius: 12px;
+}
+
+.pm-info > i {
+  font-size: 26px;
+  color: var(--accent-color);
+}
+
+/* ---------- Part 2: XP progress bar ---------- */
+.pm-xp-progress {
+  margin-top: 20px;
+  padding: 18px 20px;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+}
+
+.pm-xp-text {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+
+.pm-xp-text span {
+  color: #64748b;
+}
+
+/* Grey track = the REMAINING part */
+.pm-bar {
+  height: 14px;
+  background-color: #e2e8f0;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+/* Teal fill = the COMPLETED part (its width is set in the HTML) */
+.pm-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #14b8a6, #0f766e);
+  border-radius: 20px;
+}
+
+/* ---------- Part 3: statistics (Flexbox) ---------- */
+.pm-stats {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.pm-stats h3 {
+  font-size: 22px;
+  margin: 0;
+  padding-right: 30px;
+  border-right: 1px solid #e2e8f0;
+}
+
+.pm-stat {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.pm-stat > i {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background-color: #f0fdfa;
+  color: var(--accent-color);
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ---------- Part 4: Kanban board (Grid) ---------- */
+.pm-board-title {
+  font-size: 26px;
+  margin-top: 40px;
+}
+
+.pm-board-subtitle {
+  color: #64748b;
+  margin-bottom: 20px;
+}
+
+/* 3 equal columns */
+.pm-board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.pm-column {
+  border-radius: 16px;
+  padding: 15px;
+}
+
+.pm-column-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.pm-column-header h4 {
+  font-size: 18px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.pm-count {
+  font-size: 13px;
+  background-color: #ffffff;
+  color: #475569;
+  padding: 3px 10px;
+  border-radius: 20px;
+}
+
+/* Skill cards */
+.pm-skill-card {
+  background-color: #ffffff;
+  border-left: 4px solid #94a3b8;
+  border-radius: 12px;
+  padding: 15px 18px;
+  margin-bottom: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.pm-skill-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+}
+
+.pm-skill-card h5 {
+  font-size: 16px;
+  margin: 0 0 10px 0;
+}
+
+.pm-card-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pm-status {
+  font-size: 12px;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 20px;
+}
+
+.pm-xp {
+  font-size: 13px;
+  font-weight: 600;
+  color: #475569;
+  background-color: #f1f5f9;
+  padding: 3px 10px;
+  border-radius: 8px;
+}
+
+/* A different colour for each category */
+.pm-planned {
+  background-color: #f1f5f9;
+}
+
+.pm-planned .pm-skill-card {
+  border-left-color: #94a3b8;
+}
+
+.pm-planned .pm-status {
+  background-color: #e2e8f0;
+  color: #475569;
+}
+
+.pm-in-progress {
+  background-color: #e0f2fe;
+}
+
+.pm-in-progress .pm-skill-card {
+  border-left-color: #0ea5e9;
+}
+
+.pm-in-progress .pm-status {
+  background-color: #e0f2fe;
+  color: #0369a1;
+}
+
+.pm-completed {
+  background-color: #dcfce7;
+}
+
+.pm-completed .pm-skill-card {
+  border-left-color: #16a34a;
+}
+
+.pm-completed .pm-status {
+  background-color: #dcfce7;
+  color: #15803d;
+}
+
+/* Tablets and phones: stack everything in one column */
+@media (max-width: 991px) {
+  .pm-overview-top,
+  .pm-info-boxes,
+  .pm-stats {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .pm-profile,
+  .pm-stats h3 {
+    border-right: none;
+    padding-right: 0;
+  }
+
+  .pm-board {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =========================================================
+   LW10 – COMPLEMENTARY 1: animated gradient in Services
+   ========================================================= */
+section.services {
+  background: linear-gradient(-45deg, #99f6e4, #bfdbfe, #ccfbf1, #a5f3fc);
+  background-size: 400% 400%;
+  animation: servicesGradient 10s ease infinite;
+}
+
+/* Moves the big gradient left and right */
+@keyframes servicesGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* LW10 – COMPLEMENTARY 2: animated CSS shapes in About */
+section.about {
+  position: relative;
+}
+
+/* Keeps the About content ABOVE the shapes */
+.about .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* Invisible layer that covers the section and holds the shapes */
+.about-shapes {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.shape {
+  position: absolute;
+  display: block;
+  opacity: 0.6;
+}
+
+/* Shape 1: circle – floats up and down */
+.shape-circle {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #5eead4, #0f766e);
+  top: 40px;
+  left: 5%;
+  animation: floatShape 5s ease-in-out infinite;
+}
+
+/* Shape 2: triangle (made with borders) – rotates */
+.shape-triangle {
+  width: 0;
+  height: 0;
+  border-left: 45px solid transparent;
+  border-right: 45px solid transparent;
+  border-bottom: 78px solid #38bdf8;
+  top: 40px;
+  right: 6%;
+  animation: rotateShape 10s linear infinite;
+}
+
+/* Shape 3: square turned into a diamond – scales (pulses) */
+.shape-square {
+  width: 55px;
+  height: 55px;
+  border-radius: 10px;
+  background-color: #fbbf24;
+  bottom: 30px;
+  left: 4%;
+  animation: pulseShape 4s ease-in-out infinite;
+}
+
+@keyframes floatShape {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-25px);
+  }
+}
+
+@keyframes rotateShape {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulseShape {
+  0%, 100% {
+    transform: rotate(45deg) scale(1);
+  }
+  50% {
+    transform: rotate(45deg) scale(1.3);
+  }
+}
